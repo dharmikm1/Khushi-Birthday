@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff4f7">
+<title>A little birthday surprise for Khushi 💗</title>
+<style>
+:root{--pink:#f5a9c4;--deep:#7e3153;--cream:#fff7f4;--ink:#432638;--gold:#d49a48}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(145deg,#fff8f5,#ffeaf2 55%,#fff3df);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;min-height:100svh;overflow-x:hidden}
+main{min-height:100svh;display:grid;place-items:center;padding:24px 16px;position:relative;isolation:isolate}
+.glow{position:fixed;width:220px;height:220px;border-radius:50%;filter:blur(55px);opacity:.45;z-index:-1;pointer-events:none}
+.g1{background:#ffb8d2;top:-65px;left:-70px}.g2{background:#ffe1a5;bottom:-70px;right:-65px}
+.card{width:min(100%,470px);background:#ffffffd9;border:1px solid #fff;box-shadow:0 22px 70px #a74c6b20;border-radius:28px;padding:clamp(24px,6vw,38px);text-align:center;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#a85d7b;font-weight:800}
+h1{font-size:clamp(2.15rem,9vw,3.5rem);line-height:1.03;letter-spacing:-.05em;margin:15px 0 12px;color:var(--deep)}
+p{line-height:1.65;color:#765468;margin:0 auto 20px}
+.emoji{font-size:3.5rem;margin:8px 0 14px;display:block;animation:bob 2.5s ease-in-out infinite}
+button{font:inherit;font-weight:750;border:0;border-radius:999px;padding:14px 20px;min-height:48px;cursor:pointer;transition:transform .18s,box-shadow .18s}
+button:focus-visible{outline:3px solid #7e3153;outline-offset:3px}
+button:hover{transform:translateY(-2px)}
+.primary{background:var(--deep);color:white;box-shadow:0 8px 20px #7e315333;width:100%}
+.secondary{background:#fff0f5;color:var(--deep);border:1px solid #f3c4d5}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hidden{display:none!important}
+.progress{display:flex;justify-content:center;gap:6px;margin:0 0 24px}
+.dot{width:7px;height:7px;border-radius:50%;background:#f0d4df}.dot.active{background:var(--deep);width:22px;border-radius:10px}
+.note{background:#fff6f8;border:1px dashed #e8a9c1;border-radius:18px;padding:18px;margin:20px 0;text-align:left;line-height:1.7}
+.small{font-size:.82rem;color:#a17a8c;margin-top:20px}
+#confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.piece{position:absolute;top:-20px;width:9px;height:14px;border-radius:3px;animation:fall 3.8s linear forwards}
+.heart{position:absolute;pointer-events:none;animation:float 3.2s ease-out forwards;z-index:0}
+@keyframes bob{50%{transform:translateY(-7px) rotate(3deg)}}
+@keyframes fall{to{transform:translateY(110svh) rotate(720deg);opacity:.9}}
+@keyframes float{to{transform:translateY(-180px) translateX(var(--drift));opacity:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div id="confetti" aria-hidden="true"></div>
+<main>
+<section class="card" aria-live="polite">
+<div class="progress" aria-label="Surprise progress"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+<div id="step1">
+<div class="eyebrow">A tiny birthday mission</div>
+<span class="emoji" aria-hidden="true">🎁</span>
+<h1>Khushi,<br>this is for you.</h1>
+<p>You've received one very important birthday surprise.<br>But first… we need to verify something.</p>
+<button class="primary" id="start">Okay, let's see 👀</button>
+<div class="small">Totally official. Definitely not suspicious. 😇</div>
+</div>
+<div id="step2" class="hidden">
+<div class="eyebrow">Security question #1</div>
+<span class="emoji" aria-hidden="true">🕵️‍♀️</span>
+<h1>Are you ready<br>for your gift?</h1>
+<p>Choose wisely. Your birthday happiness depends on it.</p>
+<div class="row">
+<button class="primary" id="yes" style="width:auto;flex:1">YES, obviously!</button>
+<button class="secondary" id="alsoYes" style="flex:1">I guess? 😅</button>
+</div>
+<div class="small">Both answers are suspiciously acceptable.</div>
+</div>
+<div id="step3" class="hidden">
+<div class="eyebrow">Verification complete ✓</div>
+<span class="emoji" aria-hidden="true">💌</span>
+<h1>Surprise!</h1>
+<p>Okay, Khushi… you have officially been pranked. There was no secret prize or complicated mission.</p>
+<div class="note"><strong>But here's the real gift:</strong><br>Happy Birthday, Khushi! 💗 I hope your day is full of laughter, little surprises, lovely people, and all the things that make you genuinely happy. Keep smiling, keep being your wonderful self, and may this new year bring you more beautiful memories than you can count. You deserve the sweetest things life has to offer. ✨</div>
+<p style="font-size:1.05rem;color:#7e3153;font-weight:750">Have the happiest birthday! 🎂</p>
+<button class="primary" id="again">One more little surprise? 💕</button>
+<div class="small">Made just to make you smile.</div>
+</div>
+<div id="step4" class="hidden">
+<div class="eyebrow">Bonus unlocked</div>
+<span class="emoji" aria-hidden="true">🌷</span>
+<h1>One last thing…</h1>
+<p>Don't ever let the world make you forget how special you are. Keep choosing joy, keep chasing your dreams, and save a little cake for the rest of us. 🥹</p>
+<div class="row">
+<button class="secondary" id="back">Read my birthday wish again</button>
+<button class="primary" id="share" style="width:auto">Share the love 💗</button>
+</div>
+<div class="small" id="shareStatus">Screenshot this if it made you smile.</div>
+</div>
+</section>
+</main>
+<script>
+const steps=[...document.querySelectorAll('[id^="step"]')];
+const dots=[...document.querySelectorAll('.dot')];
+function show(n){steps.forEach((s,i)=>s.classList.toggle('hidden',i!==n-1));dots.forEach((d,i)=>d.classList.toggle('active',i<n));if(n===3)confetti();}
+document.getElementById('start').onclick=()=>show(2);
+document.getElementById('yes').onclick=()=>show(3);
+document.getElementById('alsoYes').onclick=()=>show(3);
+document.getElementById('again').onclick=()=>show(4);
+document.getElementById('back').onclick=()=>show(3);
+document.getElementById('share').onclick=async()=>{const msg='Happy Birthday, Khushi! 💗 Wishing you a beautiful year full of laughter, love and lovely surprises. 🎂✨';try{if(navigator.share){await navigator.share({title:'A birthday wish for Khushi',text:msg});}else if(navigator.clipboard){await navigator.clipboard.writeText(msg);document.getElementById('shareStatus').textContent='Birthday wish copied! You can paste it into a message 💗';}else{document.getElementById('shareStatus').textContent=msg;}}catch(e){}};
+function confetti(){const host=document.getElementById('confetti');host.innerHTML='';const colors=['#f5a9c4','#d49a48','#c8b5ed','#f7d87b','#ef789d','#a8d9c6'];for(let i=0;i<65;i++){const el=document.createElement('i');el.className='piece';el.style.left=Math.random()*100+'%';el.style.background=colors[i%colors.length];el.style.animationDelay=Math.random()*1.2+'s';el.style.transform='rotate('+Math.random()*360+'deg)';host.appendChild(el);}setTimeout(()=>host.innerHTML='',5200);for(let i=0;i<12;i++){const h=document.createElement('span');h.className='heart';h.textContent=['💗','✨','💕'][i%3];h.style.left=(15+Math.random()*70)+'%';h.style.bottom='15%';h.style.setProperty('--drift',(Math.random()*140-70)+'px');h.style.animationDelay=(Math.random()*.7)+'s';host.appendChild(h);}setTimeout(()=>host.innerHTML='',4500);}
+</script>
+</body>
+</html>
